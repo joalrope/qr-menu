@@ -1,21 +1,22 @@
-.ant-layout-sider {
-  min-height: 100vh;
+.--layout-header__logo {
+  width: 100px;
 }
 
-.ant-layout-footer {
-  background-color: #1a1a13;
-  display: flex;
-  flex-direction: row;
-  vertical-align: middle;
-}
-
-.--layout__sider-logo {
-  min-height: 64px;
-  background-color: #1a1a13;
-  background-image: url("../assets/images/logo.png");
+.--app__logo {
+  float: left;
+  width: 100%;
+  height: 64px;
+  max-height: 64px;
+  margin: 0;
+  background-color: #fff;
+  background-image: url('../assets/images/logo.png');
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 75%;
   background-position: center;
+}
+
+.--layout__content {
+  height: 100vh;
 }
 
 .--layout__footer {
@@ -25,17 +26,6 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-}
-
-.ant-menu-overflow-item {
-  line-height: 30px;
-}
-
-.ant-menu-overflow {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-top: 15px;
 }
 
 .--footer__avatar {

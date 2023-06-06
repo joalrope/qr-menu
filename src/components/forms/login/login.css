@@ -1,0 +1,34 @@
+/* @import '../../../../../assets/css/partials/variables.scss'; */
+
+.--login__form {
+    width: 100%;
+    max-width: 275px;
+}
+
+.--login-form__button {
+    width: 100%;
+}
+
+.--login-goto__text {
+    display: block;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.--login-goto__link {
+    font-weight: 500;
+    margin-left: 12px !important;
+    color: var(--color-primary);
+}
+
+.--login-form__forgot {
+    color: var(--color-primary);
+    display: block;
+    font-weight: 500;
+    text-align: center;
+    width: 100%
+}
+
+.site-form-item-icon {
+    color: var(--color-primary);
+}

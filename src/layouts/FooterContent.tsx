@@ -1,4 +1,4 @@
-import { Avatar, Col, Row, theme } from "antd";
+import { Avatar, Col, Image, Row, theme } from "antd";
 import {
   InstagramFilled,
   TwitterCircleFilled,
@@ -12,13 +12,12 @@ export const FooterContent = () => {
   const { token } = useToken();
 
   return (
-    <Row className="--layout__footer" style={{ color: token.colorPrimary }}>
+    <Row className="--layout__footer">
       <Col className="copyitem" xs={0} sm={0} md={0} lg={5}>
-        Hecho con ♥ por Bohiques
+        <Image width={200} src="../../public/footer-logo.png" />
       </Col>
       <Col className="copyitem">
-        Copyright <CopyrightOutlined /> {new Date().getFullYear()} -
-        Yourcareconnects
+        Copyright <CopyrightOutlined /> {new Date().getFullYear()} - QR MENU PR
       </Col>
       <Col className="copyitem">
         <a
@@ -27,17 +26,25 @@ export const FooterContent = () => {
           target="_blank"
         >
           <Avatar style={{ backgroundColor: token.colorPrimary }}>
-            <FacebookFilled style={{ color: "#1a1a13" }} />
+            <FacebookFilled />
           </Avatar>
         </a>
-        <a className="--footer__avatar" href="https://ant.design">
+        <a
+          className="--footer__avatar"
+          href="https://ant.design"
+          target="_blank"
+        >
           <Avatar style={{ backgroundColor: token.colorPrimary }}>
-            <TwitterCircleFilled style={{ color: "#1a1a13" }} />
+            <TwitterCircleFilled />
           </Avatar>
         </a>
-        <a className="--footer__avatar" href="https://ant.design">
+        <a
+          className="--footer__avatar"
+          href="https://ant.design"
+          target="_blank"
+        >
           <Avatar style={{ backgroundColor: token.colorPrimary }}>
-            <InstagramFilled style={{ color: "#1a1a13" }} />
+            <InstagramFilled />
           </Avatar>
         </a>
       </Col>

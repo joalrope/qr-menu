@@ -1,13 +1,12 @@
-import { LoginForm } from "../../../../forms/LoginForm";
-import "./login.css";
+import { LoginForm } from "../../../../forms/login/LoginForm";
 
 export const Login = () => {
   return (
-    <div className="--login__container">
-      <div className="--login__bg"></div>
-      <div className="--login__form">
+    <>
+      <div className="--page__body"></div>
+      <div className="--form-page__container">
         <LoginForm />
       </div>
-    </div>
+    </>
   );
 };

@@ -19,10 +19,10 @@ function App() {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: "#f8c65b", // color primario
-          colorBgBase: "#ffffff29", // body color
-          colorTextBase: "#1a1a13",
-          colorWhite: "#1a1a13",
+          colorPrimary: "#53c249", // color primario
+          //colorBgBase: "#ffffff29", // body color
+          //colorTextBase: "#1a1a13",
+          //colorWhite: "#1a1a13",
         },
       }}
       locale={curLng}

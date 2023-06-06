@@ -1,23 +1,19 @@
-import { useAppSelector, useAppDispatch } from "../store/hooks";
-import { selecti18n, useES, useUS } from "../store/reducers/i18n";
+import { useAppSelector } from "../store/hooks";
+import { selecti18n } from "../store/reducers/i18n";
 import { Link } from "react-router-dom";
-import { Menu, Tooltip, theme } from "antd";
+import { Menu } from "antd";
 import type { MenuProps } from "antd";
-import { TranslationOutlined } from "@ant-design/icons";
+import "./app-layout.css";
 
 import { Route, routes } from "../router/routes";
 import { INav } from "./AppLayout";
 
-const { useToken } = theme;
-
 export const HeaderContent = () => {
   const i18n = useAppSelector(selecti18n);
   console.log(i18n);
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
 
-  const { token } = useToken();
-
-  const isLoggedIn = true;
+  // const isLoggedIn = false;
 
   const mode = "";
 
@@ -36,11 +32,11 @@ export const HeaderContent = () => {
 
   let locationPath;
 
-  const setLng = () => {
+  /*   const setLng = () => {
     if (i18n === "enUS") dispatch(useES);
     if (i18n === "enES") dispatch(useUS);
     console.log(i18n);
-  };
+  }; */
 
   const handleClick = ({ key }: INav) => {
     locationPath = key;
@@ -55,26 +51,21 @@ export const HeaderContent = () => {
 
   return (
     <>
-      {!isLoggedIn && (
-        <div className="--layout-header__logo">
-          <div className="--app__logo" />
-        </div>
-      )}
-      <span style={{ color: token.colorPrimary }}>{i18n}</span>
+      <div className="--layout-header__logo">
+        <div className="--app__logo" />
+      </div>
+
       <Menu
-        theme="dark"
+        theme="light"
         mode="horizontal"
         selectedKeys={locationPath}
         defaultSelectedKeys={["/"]}
         onClick={handleClick}
         items={items}
       />
-      <Tooltip placement="top" title={"English/Español"}>
-        <TranslationOutlined
-          onClick={setLng}
-          style={{ color: token.colorPrimary, paddingLeft: "25px" }}
-        />
-      </Tooltip>
+      {/*  <Tooltip placement="top" title={"English/Español"}>
+        <TranslationOutlined onClick={setLng} style={{ paddingLeft: "25px" }} />
+      </Tooltip> */}
     </>
   );
 };

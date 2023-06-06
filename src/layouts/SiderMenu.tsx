@@ -38,7 +38,7 @@ export const SiderMenu = () => {
 
   return (
     <Menu
-      theme="dark"
+      theme="light"
       mode="inline"
       selectedKeys={locationPath}
       defaultSelectedKeys={["/"]}

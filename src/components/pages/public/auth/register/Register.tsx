@@ -1,12 +1,12 @@
-import { RegisterForm } from "../../../../forms/RegisterForm";
-import "./register.css";
+import { RegisterForm } from "../../../../forms/register/RegisterForm";
 
 export const Register = () => {
   return (
-    <div className="--register__container">
-      <div className="--register__form">
+    <>
+      <div className="--page__body"></div>
+      <div className="--form-page__container">
         <RegisterForm />
       </div>
-    </div>
+    </>
   );
 };
